@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dangky.css">
+    <title>Đăng ký</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p></p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="main.html" class="linkactive">Trang Chủ</a></li>
+                <li><a href="#" class="link">Tìm Kiếm</a></li>
+                <li><a href="#" class="link">Dịch Vụ</a></li>
+                <li><a href="#" class="link">Liên hệ</a></li>
+                <li><a href="#" class="link">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Đăng Nhập</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- ĐN form -------------------------->
+        <form class="formDKy" action="dangnhap.html">
+
+            <div class="login-container" id="login">
+                <div class="top_dn">
+                    <span class="sp_dn">Bạn đã có tài khoản? <a class="a_dangky" href="dangnhap.html" onclick="register()">Đăng Nhập</a></span>
+                    <header class="h_dn">Đăng Ký</header>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field_dn_mail" placeholder="Tên đăng nhập/Email">
+                    <p type="text" class="err_dn_mail"></p>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field_dn_name" placeholder="Họ và tên">
+                    <p type="text" class="err_dn_name"></p>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field_dn_mk" placeholder="Mật khẩu">
+                    <p type="text" class="err_dn_mk"></p>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field_dn_mk2" placeholder="Nhập lại mật khẩu">
+                    <p type="text" class="err_dn_mk2"></p>
+                </div>
+                <input class ="check_dkhoan" type="checkbox">
+                <label class ="lb_dkhoan" for="">Chấp nhận điều khoản</label>
+                <div class="two">
+                    <label><a href="dieukhoan.html"> Điều khoản</a></label>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Đăng Ký" onclick="redirectToHomePage()">
+                </div>
+            </div>
+        </form>
+
+       
+        
+</div>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.formDKy').submit(function(event){
+        
+        var getInputMail=$(".input-field_dn_mail").val();
+        var getInputName=$(".input-field_dn_name").val();
+        var getInputPass=$(".input-field_dn_mk").val();
+        var getInputPass2=$(".input-field_dn_mk2").val();
+        
+        if(getInputMail==""){
+            alert("Không được bỏ trống tài khoản & email !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dn_mail").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+        if( getInputName==""){
+            alert("Không được bỏ trống tên !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dn_name").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+        if( getInputPass==""){
+            alert("Không được bỏ trống mật khẩu !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dn_mk").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+        if( getInputPass2==""){
+            alert("Không được bỏ trống nhập lại mật khẩu !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dn_mk2").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+    });
+});
+
+
+</script>
+<script>
+    $(document).ready(function(){
+    $(".btn.white-btn").click(function(){
+        window.location.href = "index.html";
+    })
+})
+</script>
+</body>
+</html>

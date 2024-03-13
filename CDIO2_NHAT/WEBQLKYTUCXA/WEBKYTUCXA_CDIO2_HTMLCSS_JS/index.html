@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Đăng nhập & Đăng ký</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p></p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="main.html" class="linkactive">Trang Chủ</a></li>
+                <li><a href="#" class="link">Tìm Kiếm</a></li>
+                <li><a href="#" class="link">Dịch Vụ</a></li>
+                <li><a href="#" class="link">Liên hệ</a></li>
+                <li><a href="#" class="link">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Đăng Nhập</button>
+            <button class="btn" id="registerBtn" onclick="register()">Đăng Ký</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        <!------------------- ĐN form -------------------------->
+        <form class="formDN" action="main.html">
+            <div class="login-container" id="login">
+                <div class="top_dn">
+                    <span class="sp_dn">Bạn chưa có tài khoản? <a class="a_dangky" href="#" onclick="register()">Đăng Ký</a></span>
+                    <header class="h_dn">Đăng Nhập</header>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field_dn_mail" placeholder="Tên đăng nhập/Email">
+                    <p type="text" class="err_dn_mail"></p>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field_dn_mk" placeholder="Mật khẩu">
+                    <p type="text" class="err_dn_mk"></p>
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Nhớ mật khẩu</label>
+                    </div>
+                </div>
+                <div class="two">
+                    <label><a href="#">Quên mật khẩu?</a></label>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Đăng Nhập" onclick="redirectToHomePage()">
+                </div>
+            </div>
+        </form>
+        <!------------------- ĐK form -------------------------->
+        <form class="formDky" action="index.html">
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Bạn đã có tài khoản? <a href="#" onclick="login()">Đăng Nhập</a></span>
+                <header>Đăng Ký</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field_dky_mail" placeholder="Tên đăng nhập/Email">
+                    <p type="text" class="err_dky_mail"></p>
+
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field_dky_mk" placeholder="Mật khẩu">
+                <p type="text" class="err_dky_mk"></p>
+
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field_dky_mk2" placeholder="Nhập lại mật khẩu">
+                <p type="text" class="err_dky_mk2"></p>
+
+            </div>
+            <div class="two-col">
+                <div class="one_dky">
+                    <a class="dieukhoan" href="hopdong.html">Điều khoản & hợp đồng</a>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit_dky" value="Đăng Ký">
+            </div>
+    </div>
+</form>
+
+</div>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.formDN').submit(function(event){
+        
+        var getInputMail=$(".input-field_dn_mail").val();
+        var getInputPass=$(".input-field_dn_mk").val();
+        
+        if(getInputMail==""){
+            $(".err_dn_mail").text("Không được bỏ trống !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dn_mail").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+        if( getInputPass==""){
+            $(".err_dn_mk").text("Không được bỏ trống !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dn_mk").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+    });
+});
+$(document).ready(function(){
+    $('.formDky').submit(function(event){
+        
+        var getInputMail=$(".input-field_dky_mail").val();
+        var getInputPass=$(".input-field_dky_mk").val();
+        var getInputPass2=$(".input-field_dky_mk2").val();
+
+        if(getInputMail==""){
+            $(".err_dky_mail").text("Không được bỏ trống !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dky_mail").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+        if( getInputPass==""){
+            $(".err_dky_mk").text("Không được bỏ trống !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dky_mk").text("")
+            // Không ngăn chặn việc chuyển trang
+        }
+        if( getInputPass2==""){
+            $(".err_dky_mk2").text("Không được bỏ trống !")
+            event.preventDefault(); // Ngăn chặn việc chuyển trang
+        }else{
+            $(".err_dky_mk2").text("")
+            // Không ngăn chặn việc chuyển trang
+            alert("Đăng ký thành công")
+        }
+
+    });
+});
+</script>
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+</script>
+</body>
+</html>

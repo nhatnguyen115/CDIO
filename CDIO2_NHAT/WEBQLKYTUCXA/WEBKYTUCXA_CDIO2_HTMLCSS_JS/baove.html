@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phòng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="baove.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button.btnbaove1").click(function(){
+                alert("Số điện thoại liên hệ: 1900 7373")
+            })
+            $("button.btnbaove2").click(function(){
+                alert("Số điện thoại liên hệ: 1900 7332")
+            })
+            $("button.btnbaove3").click(function(){
+                alert("Số điện thoại liên hệ: 1900 4344")
+            })
+            $("button.btnbaove4").click(function(){
+                alert("Số điện thoại liên hệ: 1900 5445")
+            })
+            $("button.btnbaove5").click(function(){
+                alert("Số điện thoại liên hệ: 1900 6577")
+            })
+            $("button.btnbaove6").click(function(){
+                alert("Số điện thoại liên hệ: 1900 8878")
+            })
+            $("button.btnbaove7").click(function(){
+                alert("Số điện thoại liên hệ: 1900 6688")
+            })
+            $("button.btnbaove8").click(function(){
+                alert("Số điện thoại liên hệ: 1900 3344")
+            })
+            $("button.btnbaove9").click(function(){
+                alert("Số điện thoại liên hệ: 1900 2233")
+            })
+
+        })
+    </script>
+    <h1>Danh sách phòng</h1>
+
+    <div class="wrapper">
+        
+        <!-- ===== NAVIGATION BAR ===== -->
+        <nav class="nav">
+            <div class="nav_logo">
+                <span>KÝ TÚC XÁ</span>
+            </div>
+            <div class="right_nav">
+                <div class="nav_menu" id="navMenu">
+                    <ul class="link_list">
+                        <div class="close-menu">
+                            <i class="fa fa-times" onclick="menuClose()"></i>
+                        </div>
+                        <li class="list">
+                            <a href="main.html" class="link">Trang Chủ</a>
+                        </li>
+                        <li class="list">
+                            <a href="#myModal" class="link" id="myBtn">Tìm Kiếm <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Tìm Kiếm</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="phong.html" class="link">Phòng</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="xe.html" class="link">Khu gửi xe</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="sh.html" class="link">Khu sinh hoạt</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="#myModal1" class="link" id="myBtn">Dịch Vụ<i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Dịch Vụ</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="datphong.html" class="link">Đặt phòng sửa chữa</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="hopdong.html" class="link">Hợp đồng</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="baotri.html" class="link">Bảo trì</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                            <a href="thongke.html" class="link">Thống kê</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="#myModal" class="link" id="myBtn">Liên hệ<i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Liên Hệ</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="quanly.html" class="link">Phòng QL</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="baove.html" class="link">Bảo vệ</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="laocong.html" class="link">Lao công</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="list">
+                            <a href="#myModal2" class="link" id="myBtn">Khác <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box about_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Khác</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="baoloi.html" class="link">Báo lỗi</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="dangky.html" class="link">Đăng ký</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="index.html" class="link">Đăng nhập</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="index.html" class="link">Đăng xuất</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+        <div class="centered-text-trangchu">
+            <h1>
+                "DTU Xin chào !"
+            </h1></div>
+            
+    </div>
+    <h1 class="head1">
+        BẢO VỆ KÝ TÚC XÁ
+    </h1></div>
+    <div class="container">
+        <div class="gallery">
+            <img class="img_bve" src="bv1.jpg">
+            <button class="btnbaove1">Đội bảo vệ số 1</button>
+        </div>
+        <div class="gallery">
+            <img class="img_bve" src="bv2.jpg">
+            <button class="btnbaove2">Đội bảo vệ số 2</button>
+        </div> 
+        <div class="gallery">
+            <img class="img_bve" src="bv3.jpg">
+            <button class="btnbaove3">Đội bảo vệ số 3</button>
+        </div>
+            <div class="gallery">
+                <img class="img_bve" src="bv4.jpg">
+                <button class="btnbaove4">Đội bảo vệ số 4</button>
+        </div> 
+            <div class="gallery">
+                <img class="img_bve" src="bv5.jpg">
+                <button class="btnbaove5">Đội bảo vệ số 5</button>
+        </div>
+        <div class="gallery">
+            <img class="img_bve" src="bv6.jpg">
+            <button class="btnbaove6">Đội bảo vệ số 6</button>
+        </div> 
+        <div class="gallery">
+            <img class="img_bve" src="bv7.jpg">
+            <button class="btnbaove7">Đội bảo vệ số 7</button>
+        </div>
+        <div class="gallery">
+            <img class="img_bve" src="bv8.jpg">
+            <button class="btnbaove8">Đội bảo vệ số 8</button>
+        </div> 
+        <div class="gallery">
+            <img class="img_bve" src="bv9.jpg">
+            <button class="btnbaove9">Đội bảo vệ số 9</button>
+        </div>
+        <!-- <div class="centered-text-trangchu">
+            <a class="centered-text-trangchu" href="">Trang sau </a>
+            <a href="">:   </a>
+            <a href=""> 1</a>
+            <a href=""> 2</a>
+            <a href=""> 3</a>
+            <a href=""> 4</a>
+            <a href=""> 5</a>
+            <a href=""> ...</a>
+            <a href=""> 6</a>
+            <a href=""> 7</a>
+            <a href=""> 8</a> -->
+        </div>
+    </div>
+    <div class="footer">
+		<div class="container container-footer">
+			<div class="navi-foot">
+				<ul class="menu-footer">
+					<li class="main">
+						<span>INFORMATION</span>
+						<ul class="sub-footer">
+							<li><a href="">DTU UNIVERSITY</a></li>
+							<li><a href="">Student dormitory</a></li>
+							<li><a href="">Search</a></li>
+							<li><a href="">Servic</a></li>
+							<li><a href="">Other</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>WHY CHOOSE US</span>
+						<ul class="sub-footer">
+							<li><a href="">Easy check-in and check-out</a></li>
+							<li><a href="">Ethical trading</a></li>
+							<li><a href="">Stable</a></li>
+							<li><a href="">Testimonials</a></li>
+							<li><a href="">Safe</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>YOUR ACCOUNT</span>
+						<ul class="sub-footer">
+							<li><a href="">Sign in</a></li>
+							<li><a href="">Register</a></li>
+							<li><a href="">Update information</a></li>
+							<li><a href="">Keep track of appointments</a></li>
+							<li><a href="">See appointment</a></li>
+							<li><a href="">See your room</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>LEARN ABOUT</span>
+						<ul class="sub-footer">
+							<li><a href="">new post</a></li>
+							<li><a href="">Block A</a></li>
+							<li><a href="">Block B</a></li>
+							<li><a href="">Lookbook RSS feed</a></li>
+							<li><a href="">Delete your lookbook</a></li>
+							<li><a href="">View your lookbook</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>CONTACT WITH US</span>
+						<ul class="sub-footer">
+							<li>Head Office: <a href="">KTX.<br>03 Quang Trung, Hai Chau, Tp Da Nang.</a></li>
+							<li>Telephone: <a href="">0123-456-789</a></li>
+							<li>Email: <a href="">support@yourwebsite.com</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <input type="checkbox" name="" id="check">
+    <div class="vertical-menu">
+        <label for="check">
+            <span1 class="fas fa-close" id="time"></span1>
+            <span1 class="fas fa-bars" id="bars"></span1>
+        </label>
+        <div class="head">Ký Túc Xá</div>
+        <ol>
+            <div class="menuz">
+                <li class="itemz"><a href="main.html"><i1 class="fas fa-home"></i1>Trang Chủ</a></li>
+                <!--  -->
+                <div class="itemz"><a class="sub-btn"><i1 class="fas fa-search"></i1>Tìm Kiếm
+                    <i1 class="fas fa-angle-right dropdown"></i1>
+                </a>
+            <div class="sub-menu">
+                <a href="phong.html" class="sub-item">Phòng</a>
+                <a href="xe.html" class="sub-item">Khu gửi xe</a>
+                <a href="sh.html" class="sub-item">Khu sinh hoạt</a>
+            </div>
+            </div>
+                <!--  -->
+                <div class="itemz"><a class="sub-btn"><i1 class="fas fa-phone"></i1>Liên Hệ
+                    <i1 class="fas fa-angle-right dropdown"></i1>
+                </a>
+            <div class="sub-menu">
+                <a href="quanly.html" class="sub-item">Phòng QL</a>
+                <a href="baove.html" class="sub-item">Bảo vệ</a>
+                <a href="laocong.html" class="sub-item">Lao công</a>
+            </div>
+            </div>
+                <div class="itemz"><a class="sub-btn"><i1 class="fas fa-caret-square-down"></i1>Dịch Vụ
+                    <i1 class="fas fa-angle-right dropdown"></i1>
+                </a>
+            <div class="sub-menu">
+                <a href="datphong.html" class="sub-item">Đặt phòng</a>
+                <a href="hopdong.html" class="sub-item">Hợp đồng</a>
+                <a href="baotri.html" class="sub-item">Bảo trì</a>
+                <a href="thongke.html" class="sub-item">Thống kê</a>
+            </div>
+            </div>
+                <div class="itemz"><a class="sub-btn"><i1 class="fas fa-check-square"></i1>Khác
+                    <i1 class="fas fa-angle-right dropdown"></i1>
+                </a>
+            <div class="sub-menu">
+                <a href="baoloi.html" class="sub-item">Báo lỗi</a>
+                <a href="dangky.html" class="sub-item">Đăng ký</a>
+                <a href="index.html" class="sub-item">Đăng nhập</a>
+                <a href="index.html" class="sub-item">Đăng xuất</a>
+            </div>
+            </div>
+
+        </ol>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+        })
+    </script>
+</body>
+</html>

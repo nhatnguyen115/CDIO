@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Khu nhà xe D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="showhinhnhaxeD.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+       
+    </script>
+    <h1>Danh sách phòng</h1>
+
+    <div class="wrapper">
+        
+        <!-- ===== NAVIGATION BAR ===== -->
+        <nav class="nav">
+            <div class="nav_logo">
+                <span>KÝ TÚC XÁ</span>
+            </div>
+            <div class="right_nav">
+                <div class="nav_menu" id="navMenu">
+                    <ul class="link_list">
+                        <div class="close-menu">
+                            <i class="fa fa-times" onclick="menuClose()"></i>
+                        </div>
+                        <li class="list">
+                            <a href="main.html" class="link">Trang Chủ</a>
+                        </li>
+                        <li class="list">
+                            <a href="#myModal" class="link" id="myBtn">Tìm Kiếm <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Tìm Kiếm</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="phong.html" class="link">Phòng</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="xe.html" class="link">Khu gửi xe</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="sh.html" class="link">Khu sinh hoạt</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="#myModal1" class="link" id="myBtn">Dịch Vụ<i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Dịch Vụ</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="datphong.html" class="link">Đặt phòng</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="hopdong.html" class="link">Hợp đồng</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="baotri.html" class="link">Bảo trì</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                            <a href="thongke.html" class="link">Thống kê</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="#myModal" class="link" id="myBtn">Liên hệ<i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Liên Hệ</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="quanly.html" class="link">Phòng QL</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="baove.html" class="link">Bảo vệ</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="laocong.html" class="link">Lao công</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="list">
+                            <a href="#myModal2" class="link" id="myBtn">Khác <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="description_box about_box">
+                                <div class="link_description" id="myDescription">
+                                    <div class="content-title">
+                                        <span>Khác</span>
+                                    </div>
+                                    <div class="desc_content">
+                                        <ul class="services_list">
+                                        <a href="baoloi.html" class="link">Báo lỗi</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="dangky.html" class="link">Đăng ký</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="index.html" class="link">Đăng nhập</a>
+                                        </ul>
+                                        <ul class="services_list">
+                                        <a href="index.html" class="link">Đăng xuất</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="main-container">
+         <div>
+            <h1 class="head1">KHU NHÀ XE D</h1>
+        </div>
+        <div class="container_img"> 
+            <form class="frm_img_xe" action="">
+            <img class="img_xe" src="x10.jpg" alt="hinhanh"><br>
+            <p class="text_location">📍 Địa chỉ: Nằm sau khu nhà D, đi từ hành lang khu C sau đó rẽ trái vào cổng</p>
+            <p class="text_location">📍 Tên: D1</p>
+            <p class="text_location">📍 Mức chứa: 1000 xe</p>
+            </form>
+            <form class="frm_img_xe" action="">
+                <img class="img_xe" src="x11.jpg" alt="hinhanh"><br>
+                <p class="text_location">📍 Địa chỉ: Nằm sau khu nhà D, đi từ hành lang khu C sau đó rẽ trái vào cổng</p>
+                <p class="text_location">📍 Tên: D2</p>
+                <p class="text_location">📍 Mức chứa: 700 xe</p>
+            </form>
+            <form class="frm_img_xe" action="">
+                <img class="img_xe" src="x12.jpg" alt="hinhanh"><br>
+                <p class="text_location">📍 Địa chỉ: Nằm sau khu nhà D, đi từ hành lang khu C sau đó rẽ trái vào cổng</p>
+                <p class="text_location">📍 Tên: D3</p>
+                <p class="text_location">📍 Mức chứa: 500 xe</p>
+            </form>
+          
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="js/quanly.js"></script>
+    <div class="footer">
+		<div class="container container-footer">
+			<div class="navi-foot">
+				<ul class="menu-footer">
+					<li class="main">
+						<span>INFORMATION</span>
+						<ul class="sub-footer">
+							<li><a href="">DTU UNIVERSITY</a></li>
+							<li><a href="">Student dormitory</a></li>
+							<li><a href="">Search</a></li>
+							<li><a href="">Servic</a></li>
+							<li><a href="">Other</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>WHY CHOOSE US</span>
+						<ul class="sub-footer">
+							<li><a href="">Easy check-in and check-out</a></li>
+							<li><a href="">Ethical trading</a></li>
+							<li><a href="">Stable</a></li>
+							<li><a href="">Testimonials</a></li>
+							<li><a href="">Safe</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>YOUR ACCOUNT</span>
+						<ul class="sub-footer">
+							<li><a href="">Sign in</a></li>
+							<li><a href="">Register</a></li>
+							<li><a href="">Update information</a></li>
+							<li><a href="">Keep track of appointments</a></li>
+							<li><a href="">See appointment</a></li>
+							<li><a href="">See your room</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>LEARN ABOUT</span>
+						<ul class="sub-footer">
+							<li><a href="">new post</a></li>
+							<li><a href="">Block A</a></li>
+							<li><a href="">Block B</a></li>
+							<li><a href="">Lookbook RSS feed</a></li>
+							<li><a href="">Delete your lookbook</a></li>
+							<li><a href="">View your lookbook</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>CONTACT WITH US</span>
+						<ul class="sub-footer">
+							<li>Head Office: <a href="">KTX.<br>03 Quang Trung, Hai Chau, Tp Da Nang.</a></li>
+							<li>Telephone: <a href="">0123-456-789</a></li>
+							<li>Email: <a href="">support@yourwebsite.com</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		
+			
+		</div>
+	</div>
+</body>
+</html>
